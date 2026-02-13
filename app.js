@@ -3,7 +3,7 @@ function register() {
     const email = document.getElementById("email").value;
     const password = document.getElementById("password").value;
 
-    fetch("http://127.0.0.1:5000/register", {
+    fetch("https://student-task-tracker-ee2a.onrender.com/register", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json"
@@ -25,7 +25,7 @@ function login() {
     const email = document.getElementById("email").value;
     const password = document.getElementById("password").value;
 
-    fetch("http://127.0.0.1:5000/login", {
+    fetch("https://student-task-tracker-ee2a.onrender.com/login", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json"
@@ -56,7 +56,7 @@ function addTask() {
     const due_date = document.getElementById("due_date").value;
     const token = localStorage.getItem("token");
 
-    fetch("http://127.0.0.1:5000/tasks", {
+    fetch("https://student-task-tracker-ee2a.onrender.com/tasks", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json",
@@ -80,7 +80,7 @@ function loadTasks() {
 
     const token = localStorage.getItem("token");
 
-    fetch("http://127.0.0.1:5000/tasks", {
+    fetch("https://student-task-tracker-ee2a.onrender.com/tasks", {
             headers: {
                 "Authorization": "Bearer " + token
             }
@@ -124,7 +124,7 @@ function deleteTask(id) {
 
     const token = localStorage.getItem("token");
 
-    fetch(`http://127.0.0.1:5000/tasks/${id}`, {
+    fetch(`https://student-task-tracker-ee2a.onrender.com/tasks/${id}`, {
             method: "DELETE",
             headers: {
                 "Authorization": "Bearer " + token
