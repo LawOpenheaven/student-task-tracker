@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+<button onclick="logout()" style="float:right;">Logout</button>
+<h2>My Tasks</h2>
+
+<input type="text" id="title" placeholder="Task title"><br><br>
+
+<input type="text" id="description" placeholder="Description"><br><br>
+
+<input type="date" id="due_date"><br><br>
+
+<button onclick="addTask()">Add Task</button>
+<ul id="taskList"></ul>
+
+<script src="app.js"></script>
+
+</body>
+</html>
